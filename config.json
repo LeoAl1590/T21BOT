@@ -4,7 +4,7 @@
 
   "__comment0": "These are the default values for the execution. They could be overwritten for each specific command in their file.",
 
-  "channels": [""],
+  "channels": ["🎵música🎵"],
   "cooldown": 0,
   "playlistLimit": 10,
   "volume": 25,

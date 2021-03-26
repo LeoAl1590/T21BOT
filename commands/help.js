@@ -90,5 +90,5 @@ module.exports = {
   cooldown: 3,
 
   // The channels where this could be invoked. Could be ignored if 'text' is not part of the valid channel types or using the default channels in the 'config' file.
-  channels: [''],
+  channels: ['🎵música🎵'],
 };
