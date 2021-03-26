@@ -1,79 +1,86 @@
-# discord-music-bot
+# Music-bot
+A complete code to download for a music bot. Using a module (discord-player) 🎧
 
-<!-- https://shields.io -->
+Looking for a code for a music bot ? This fully open source code is made for your project !
 
-<div align="center">
+If you need help with this project, to get support faster you can join the help server by just clicking [here](https://discord.gg/5cGSYV8ZZj).
 
-![GitHub repository size](https://img.shields.io/github/repo-size/gonza7aav/discord-music-bot?label=size&color=informational)
-![Repository license](https://img.shields.io/github/license/gonza7aav/discord-music-bot?color=informational)
+### ⚡ Installation
 
-</div>
+Well, let's start by downloading the code.
+Go to the folder `config` then the file `bot.js`.
+For the bot to be able to start, please complete the file with your credentials as follows :
 
-<!-- summary -->
+- For emojis
 
-A customizable music bot that allows playing audio of _YouTube_'s video in _Discord_'s voice channels.
-
-Also capable of queuing videos and pruning message in a text channel. And if you want more features, you could add them to the commands folder!
-
-## 💡 Motivation
-
-At the beginning of the quarantine, my friends and I began to use the voice channel more in our _Discord_'s server. They tried to play music from the same microphone they speak... and yes, it sounded terrible. After that, I challenge myself to develop one.
-
-<div align="center">
-
-![This isn't even my final form meme](https://media.giphy.com/media/J1QcNGubdJPESH1bPo/giphy-downsized.gif)
-
-</div>
-
-It still has some things to work out. Such as searching for videos through messages. Yet, I'm pretty proud of this.
-
-## 🚧 Prerequisites
-
-- _[Node.js](https://nodejs.org/en/)_ with _npm_ (short for _Node Package Manager_)
-- Token from [Discord developer portal](https://discord.com/developers/applications)
-- Download the repository
-
-If you have installed _Git_, you can clone it with:
-
-```cmd
-git clone https://github.com/gonza7aav/discord-music-bot.git
+```js
+emojis: {
+    off: ':x:',
+    error: ':warning:',
+    queue: ':bar_chart:',
+    music: ':musical_note:',
+    success: ':white_check_mark:',
+}
 ```
 
-## 🛠️ Install
+- For configuration
 
-1. From the repository's folder, you need to run:
-
-```cmd
-npm intall
+```js
+discord: {
+    token: 'TOKEN',
+    prefix: 'PREFIX',
+    activity: 'ACTIVITY',
+}
 ```
 
-2. Place your token in the `config.json` file
+- `token`, the token of the bot available on the [Discord Developers](https://discordapp.com/developers/applications) section.
+- `prefix`, the prefix that will be set to use the bot.
+- `activity`, the activity of the bot.
 
-3. (Optional) Customize the default values as desired
+In the console, type `npm install` to install all dependencies.
 
-4. (Optional) Customize the values of each command
+- To start the bot :
 
-If you want to develop your commands, I'll recommend using the `help.js` file which is completely commented.
+```
+#With Node
+node index.js
+npm start #Indicated in package.json
 
-## 🚀 Usage
-
-To start the bot, run:
-
-```cmd
-npm start
+#With pm2
+pm2 start index.js --name "MusicBot"
 ```
 
-Inside a pre-configured _Discord_'s text channel, you can send the `!help` to get more information about the use of each command.
+All you have to do is turn on your bot !
 
-## 📝 License
+### 🎵 Music commands
 
-<!-- https://choosealicense.com/ -->
+```
+play <name/URL>, play music in a voice channel.
+search <name>, open a panel to choose a music and then play it.
+pause, pause the current music.
+resume, puts the current music back on.
+queue, see the next songs.
+clear-queue, remove music in the queue.
+shuffle, to mix the queue.
+nowplaying, see music in progress.
+loop, to enable or disable the repeat function.
+volume <1 - 100>, change the volume.
+skip, skip to next music.
+stop, stop all music.
+filter <filter>, add / remove filter.
+w-filters, see filters.
+```
 
-Copyright © 2021 _Aguirre Gonzalo Adolfo_.
-This project is _[MIT](LICENSE)_ licensed.
+### 💡 General commands
 
----
+```
+ping, see the bot latency.
+help, see the list of available commands.
+debug, see number of voice connections.
+```
 
-<div align="center">
-Developed with ❤️ in Argentina 🇦🇷
-</div>
+### 🏓 Utilities (to change the code)
+
+Find all the functions available on the official code [right here](https://github.com/Androz2091/discord-player).
+
+This is used with [discord.js](https://www.npmjs.com/package/discord.js) and [discord-player](https://www.npmjs.com/package/discord-player).
